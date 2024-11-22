@@ -8,6 +8,7 @@ config();
 
 const app=express();
 app.use(express.json());
+
 app.use(cors())
 
 const _uri=process.env.DB_URI;
