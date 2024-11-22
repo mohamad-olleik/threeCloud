@@ -19,4 +19,7 @@ async function createStudent(){
       else{
         alert('failed to add student')
       }
+      alert('mhmd')
 }
+
+// alert('mhmd olleik')

@@ -1,5 +1,6 @@
 import express from 'express'
 import {config} from 'dotenv'
+var cors = require('cors')
 
 import { createStudentDocument,removeStudentDocument,getAllStudents,getSingleStudent } from './src/studentCrud.js'
 config();
@@ -7,6 +8,7 @@ config();
 
 const app=express();
 app.use(express.json());
+app.use(cors())
 
 const _uri=process.env.DB_URI;
 const port = process.env.PORT || 3030;
