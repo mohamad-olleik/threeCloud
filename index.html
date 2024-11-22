@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>create a student :</h2>
+    <br>
+    <label>enter student name</label>
+    <input type="text" name="name" id="name">
+    <label>enter student age</label>
+    <input type="text" name="age" id="age">
+    <label>enter student name</label>
+    <input type="text" name="city" id="city">
+    <button onclick="createStudent()">create a student</button>
+    <br>
+
+    <h2>get all students:</h2>
+    <button onclick="getAllStudents()">get All Students</button>
+    <br>
+
+    <h2>get student by ID:</h2>
+    <label>enter student id: </label>
+    <input type="text" name="getID" placeholder="your id">
+    <br>
+
+
+    <h2>delete a student by ID:</h2>
+    <label>enter an id</label>
+    <input type="text" name="deletedID" placeholder="your id">
+    <button onclick="deleteStudent()">delete a student</button>
+    <br>
+
+    <h2>update a student: </h2>
+    <label>enter student ID: </label>
+    <input type="text" id="updatedID" placeholder="enter id">
+    <button onclick="updateStudent()">update student</button>   
+
+    
+<script src="./index.js"></script>
+</body>
+</html>
