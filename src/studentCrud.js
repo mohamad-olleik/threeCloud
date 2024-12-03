@@ -92,4 +92,29 @@ export async function getSingleStudent(uri,_id){
 }
 
 
+export async function updateStudentDocument(uri,id,newAge){
+    let mongoClient;
+    try{
+     mongoClient=await connectToDB(uri);
+    let db=mongoClient.db('school');
+    let collection=db.collection('students');
+    
+    
+    await collection.updateOne({_id:id},{$set:{age:newAge}})
+
+    
+    }
+    catch(error){
+        console.error("error while  updating a student document")
+    }
+    finally{
+        mongoClient.close();
+        console.log("this line of code will be executed regardless if the precious succeeded or threw an error ")
+    }
+}
+
+
+
+
+
 

@@ -20,23 +20,45 @@
 
     <h2>get all students:</h2>
     <button onclick="getAllStudents()">get All Students</button>
+    <table border="1px" id="table"> 
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>city</th>
+
+        </tr>
+
+    </table>
     <br>
 
     <h2>get student by ID:</h2>
     <label>enter student id: </label>
-    <input type="text" name="getID" placeholder="your id">
+    <input type="text" name="getID" placeholder="your id" id="singleID">
+    <button onclick="getSingleStudent()">get info</button>
+    <br>
+    <table border="1px" id="singleStudentInfo">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>city</th>
+        </tr>
+    </table>
     <br>
 
 
     <h2>delete a student by ID:</h2>
     <label>enter an id</label>
-    <input type="text" name="deletedID" placeholder="your id">
+    <input type="text" name="deletedID" placeholder="your id" id="deletedID">
     <button onclick="deleteStudent()">delete a student</button>
     <br>
 
     <h2>update a student: </h2>
     <label>enter student ID: </label>
     <input type="text" id="updatedID" placeholder="enter id">
+    <label>enter new age: </label>
+    <input type="text" id="newAge" placeholder="new Age" name="newAge">
     <button onclick="updateStudent()">update student</button>   
 
     
