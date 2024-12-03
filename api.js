@@ -10,7 +10,7 @@ const app=express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500', // Replace with your frontend's origin
+    origin: ['http://127.0.0.1:5500', 'https://mohamad-olleik.github.io'],// Replace with your frontend's origin
     methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'], // Allow specific methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 };
@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 const _uri=process.env.DB_URI;
 const port = process.env.PORT || 3030;
 
-console.log(process.env.PORT)
+// console.log(process.env.PORT)
 
 // console.log(process.env.DB_URI)
 // console.log(process.env.PORT)
