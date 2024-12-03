@@ -5,7 +5,7 @@ async function createStudent(){
     console.log(name)
 
 
-    const response = await fetch('http://localhost:7474/student', {
+    const response = await fetch('https://threecloud.onrender.com/student', {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Ensure the server expects JSON
@@ -26,7 +26,7 @@ async function createStudent(){
 async function getAllStudents(){
   const table=document.getElementById('table');
 
-  const response=await fetch('http://localhost:7474/student',{
+  const response=await fetch('https://threecloud.onrender.com/student',{
     method:'GET',
     headers:{
       "Content-Type": "application/json", // Ensure the server expects JSON
@@ -82,7 +82,7 @@ async function getSingleStudent(){
   
 
 
-  const response=await fetch(`http://localhost:7474/getSingleStudent?id=${id}`,{
+  const response=await fetch(`https://threecloud.onrender.com/getSingleStudent?id=${id}`,{
     method:'GET',
     headers:{
       "Content-Type": "application/json", // Ensure the server expects JSON
@@ -126,7 +126,7 @@ async function deleteStudent() {
       return;
   }
 
-  const response = await fetch(`http://localhost:7474/student?id=${encodeURIComponent(deletedid)}`, {
+  const response = await fetch(`https://threecloud.onrender.com/student?id=${encodeURIComponent(deletedid)}`, {
       method: 'DELETE',
       headers: {
           "Content-Type": "application/json",
@@ -148,7 +148,7 @@ async function updateStudent(){
   let newAge=document.getElementById('newAge').value;
   let queryParameters=`?id=${encodeURIComponent(id)}&age=${encodeURIComponent(newAge)}`
 
-   const response=await fetch(`http://localhost:7474/updateStudent${queryParameters}`,{
+   const response=await fetch(`https://threecloud.onrender.com/updateStudent${queryParameters}`,{
     method: 'GET',
     headers: {
         "Content-Type": "application/json",

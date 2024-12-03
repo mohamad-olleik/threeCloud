@@ -9,7 +9,13 @@ config();
 const app=express();
 app.use(express.json());
 
-app.use(cors())
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500', // Replace with your frontend's origin
+    methods: ['GET', 'POST', 'DELETE', 'PUT', 'OPTIONS'], // Allow specific methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+};
+
+app.use(cors(corsOptions));
 
 
 
@@ -86,7 +92,7 @@ app.get('/updateStudent',async (req,res)=>{
     
     res.send('done')
 })
-app.listen(port,()=>{
+app.listen(port,()=>{   
     console.log(`server is running on port ${port}`)
 
 })
